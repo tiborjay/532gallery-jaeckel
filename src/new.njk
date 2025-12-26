@@ -1,0 +1,28 @@
+---
+layout: base.njk
+title: New Artworks
+showSearch: true
+---
+
+<div class="page">
+  <h1 class="page__title">NEW ARTWORKS:</h1>
+  <p class="page__sub">One-of-a-kind artworks and limited edition prints.</p>
+
+  <div class="grid">
+    {% for artwork in artworks %}
+      <article class="card">
+        <a class="card__img" href="/artwork/{{ artwork.slug }}/" aria-label="{{ artwork.artist }} — {{ artwork.title }}">
+          <img class="front" src="/assets/img/{{ artwork.images.front }}" alt="{{ artwork.artist }} — {{ artwork.title }}">
+          <img class="hover" src="/assets/img/{{ artwork.images.hover }}" alt="" aria-hidden="true">
+        </a>
+
+        <div class="meta">
+          <div class="artist">{{ artwork.artist | upper }}</div>
+          <div class="title">{{ artwork.title }}, {{ artwork.year }}</div>
+          <div class="medium">{{ artwork.medium }}</div>
+          <div class="price">$ {{ artwork.price }}</div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>

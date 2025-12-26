@@ -1,0 +1,268 @@
+---
+layout: base-v2.njk
+pagination:
+  data: artworks_v2
+  size: 1
+  alias: artwork
+permalink: "/artwork-v2/{{ artwork.slug }}/index.html"
+---
+
+{% set hasAlt = false %}
+{% if artwork.images and artwork.images.hover %}
+  {% set hasAlt = true %}
+{% endif %}
+
+{% set totalSlides = 1 %}
+{% if hasAlt %}
+  {% set totalSlides = 2 %}
+{% endif %}
+
+{% set maxRecs = 6 %}
+{% set recCount = 0 %}
+
+<div class="detail">
+  <div class="detail__media">
+    <div class="figure">
+      <div class="mcar{% if totalSlides == 1 %} is-single{% endif %}" data-mcar style="--mcar-segs: {{ totalSlides }};">
+        <div class="mcar__track" data-mcar-track>
+          <div class="mcar__slide">
+            <img
+              class="detail__main js-lightbox"
+              src="/assets/img/{{ artwork.images.front }}"
+              alt="{{ artwork.artist }} — {{ artwork.title }}"
+              loading="eager"
+              data-index="0"
+            >
+          </div>
+
+          {% if hasAlt %}
+            <div class="mcar__slide">
+              <img
+                class="detail__main js-lightbox"
+                src="/assets/img/{{ artwork.images.hover }}"
+                alt="{{ artwork.artist }} — {{ artwork.title }} (alternate view)"
+                loading="lazy"
+                data-index="1"
+              >
+            </div>
+          {% endif %}
+        </div>
+
+        {% if totalSlides > 1 %}
+          <button class="mcar__nav mcar__prev" type="button" data-mcar-prev aria-label="Previous">‹</button>
+          <button class="mcar__nav mcar__next" type="button" data-mcar-next aria-label="Next">›</button>
+
+          <div class="mcar__pager" aria-hidden="true">
+            <span class="mcar__seg is-on"></span>
+            {% if totalSlides == 2 %}
+              <span class="mcar__seg"></span>
+            {% endif %}
+          </div>
+
+          <div class="mcar__count" data-mcar-count>1/{{ totalSlides }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <aside class="side">
+    <div class="side__top">
+      <div class="side__artist">{{ artwork.artist | upper }}:</div>
+      <div class="side__worktitle">
+        {{ artwork.title }}{% if artwork.year %}, {{ artwork.year }}{% endif %}
+      </div>
+
+      {% if artwork.medium %}
+        <div class="side__spec">{{ artwork.medium }}</div>
+      {% endif %}
+      {% if artwork.dimensions_cm %}
+        <div class="side__spec">{{ artwork.dimensions_cm }}</div>
+      {% endif %}
+
+      <div class="side__line"></div>
+
+      <div class="btnrow">
+        <a
+          class="btn"
+          href="mailto:info@532gallery.com?subject=Inquiry%20—%20{{ artwork.artist }}%20{{ artwork.title }}"
+        >
+          PURCHASE / INQUIRE
+        </a>
+
+        {% if artwork.price %}
+          <div class="price">$ {{ artwork.price | price }}</div>
+        {% endif %}
+      </div>
+
+      <div class="smallmuted">
+        Shipping quote on request. Local pickup available.
+      </div>
+    </div>
+  </aside>
+</div>
+
+{# ===== Mobile fixed “Platform-ish” buy bar (includes details) ===== #}
+<div class="buybar" aria-hidden="true">
+  <div class="buybar__meta">
+    <div class="buybar__artist">{{ artwork.artist | upper }}:</div>
+    <div class="buybar__title">
+      <span class="buybar__work">{{ artwork.title }}</span>{% if artwork.year %}, {{ artwork.year }}{% endif %}
+    </div>
+    <div class="buybar__spec">
+      {% if artwork.medium %}{{ artwork.medium }}{% endif %}
+      {% if artwork.medium and artwork.dimensions_cm %} — {% endif %}
+      {% if artwork.dimensions_cm %}{{ artwork.dimensions_cm }}{% endif %}
+    </div>
+  </div>
+
+  <div class="buybar__cta">
+    <a
+      class="btn buybar__btn"
+      href="mailto:info@532gallery.com?subject=Inquiry%20—%20{{ artwork.artist }}%20{{ artwork.title }}"
+    >
+      PURCHASE / INQUIRE
+    </a>
+
+    {% if artwork.price %}
+      <div class="price buybar__price">$ {{ artwork.price | price }}</div>
+    {% endif %}
+  </div>
+</div>
+
+<div class="section">
+  <div class="sectiongrid">
+    <div class="label">About the artwork:</div>
+    <div class="copy">
+      {% if artwork.blurb %}
+        <p>{{ artwork.blurb }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sectiongrid">
+    <div class="label">About the artist:</div>
+    <div class="copy">
+      {% if artwork.artist_bio and artwork.artist_bio.length %}
+        {% for p in artwork.artist_bio %}
+          {% if "View Full Artist Profile:" in p %}
+            {% set parts = p.split("View Full Artist Profile:") %}
+            {% set url = (parts[1] or "") | trim %}
+            <p><a href="{{ url }}" target="_blank" rel="noopener">View Full Artist Profile</a></p>
+          {% else %}
+            <p>{{ p }}</p>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{# --------------------------------
+  RECOMMENDED (V2 only)
+  - Same artist first
+  - Then fill with others
+  - Excludes current artwork
+  - Max 6
+--------------------------------- #}
+
+{% if artworks_v2 and artworks_v2.length %}
+  <div class="section rec">
+    <h2 class="page__title">RECOMMENDED:</h2>
+    <p class="page__sub">More works you might like.</p>
+
+    <div class="grid">
+      {# 1) Same artist first #}
+      {% for item in artworks_v2 %}
+        {% if recCount < maxRecs and item.slug != artwork.slug and item.artist == artwork.artist %}
+          <article class="card">
+            <a class="card__img" href="/artwork-v2/{{ item.slug }}/" aria-label="{{ item.artist }} — {{ item.title }}">
+              <img class="front" src="/assets/img/{{ item.images.front }}" alt="{{ item.artist }} — {{ item.title }}">
+              {% if item.images.hover %}
+                <img class="hover" src="/assets/img/{{ item.images.hover }}" alt="" aria-hidden="true">
+              {% endif %}
+            </a>
+            <div class="meta">
+              <div class="artist">{{ item.artist | upper }}</div>
+              <div class="title">{{ item.title }}{% if item.year %}, {{ item.year }}{% endif %}</div>
+              {% if item.medium %}<div class="medium">{{ item.medium }}</div>{% endif %}
+              {% if item.price %}<div class="price">$ {{ item.price | price }}</div>{% endif %}
+            </div>
+          </article>
+          {% set recCount = recCount + 1 %}
+        {% endif %}
+      {% endfor %}
+
+      {# 2) Fill with others #}
+      {% for item in artworks_v2 %}
+        {% if recCount < maxRecs and item.slug != artwork.slug and item.artist != artwork.artist %}
+          <article class="card">
+            <a class="card__img" href="/artwork-v2/{{ item.slug }}/" aria-label="{{ item.artist }} — {{ item.title }}">
+              <img class="front" src="/assets/img/{{ item.images.front }}" alt="{{ item.artist }} — {{ item.title }}">
+              {% if item.images.hover %}
+                <img class="hover" src="/assets/img/{{ item.images.hover }}" alt="" aria-hidden="true">
+              {% endif %}
+            </a>
+            <div class="meta">
+              <div class="artist">{{ item.artist | upper }}</div>
+              <div class="title">{{ item.title }}{% if item.year %}, {{ item.year }}{% endif %}</div>
+              {% if item.medium %}<div class="medium">{{ item.medium }}</div>{% endif %}
+              {% if item.price %}<div class="price">$ {{ item.price | price }}</div>{% endif %}
+            </div>
+          </article>
+          {% set recCount = recCount + 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{# ===== Minimal inline JS for carousel ===== #}
+<script>
+(() => {
+  const cars = document.querySelectorAll("[data-mcar]");
+  cars.forEach((car) => {
+    const track = car.querySelector("[data-mcar-track]");
+    const slides = Array.from(car.querySelectorAll(".mcar__slide"));
+    const prev = car.querySelector("[data-mcar-prev]");
+    const next = car.querySelector("[data-mcar-next]");
+    const count = car.querySelector("[data-mcar-count]");
+    const segs = Array.from(car.querySelectorAll(".mcar__seg"));
+
+    if (!track || slides.length <= 1) {
+      car.classList.add("is-single");
+      return;
+    }
+
+    let i = 0;
+
+    const render = () => {
+      track.style.transform = `translateX(${-i * 100}%)`;
+      if (count) count.textContent = `${i + 1}/${slides.length}`;
+      segs.forEach((s, idx) => s.classList.toggle("is-on", idx === i));
+      if (prev) prev.disabled = i === 0;
+      if (next) next.disabled = i === slides.length - 1;
+    };
+
+    prev && prev.addEventListener("click", () => { i = Math.max(0, i - 1); render(); });
+    next && next.addEventListener("click", () => { i = Math.min(slides.length - 1, i + 1); render(); });
+
+    // Swipe
+    let x0 = null;
+    track.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener("touchend", (e) => {
+      if (x0 == null) return;
+      const x1 = e.changedTouches[0].clientX;
+      const dx = x1 - x0;
+      x0 = null;
+      if (Math.abs(dx) < 40) return;
+      if (dx < 0) i = Math.min(slides.length - 1, i + 1);
+      else i = Math.max(0, i - 1);
+      render();
+    });
+
+    render();
+  });
+})();
+</script>

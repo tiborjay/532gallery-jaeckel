@@ -1,0 +1,141 @@
+---
+layout: base.njk
+pagination:
+  data: artworks
+  size: 1
+  alias: artwork
+permalink: "/artwork/{{ artwork.slug }}/index.html"
+---
+
+<div class="detail">
+  <div class="detail__media">
+    <div class="figure">
+      <img
+        class="detail__main js-lightbox"
+        src="/assets/img/{{ artwork.images.front }}"
+        alt="{{ artwork.artist }} — {{ artwork.title }}"
+        loading="eager"
+        data-index="0"
+      >
+    </div>
+
+    {% if artwork.images.hover %}
+      <div class="figure">
+        <img
+          class="detail__main js-lightbox"
+          src="/assets/img/{{ artwork.images.hover }}"
+          alt="{{ artwork.artist }} — {{ artwork.title }} (alternate view)"
+          loading="lazy"
+          data-index="1"
+        >
+      </div>
+    {% endif %}
+  </div>
+
+  <aside class="side">
+    <div class="side__top">
+      <div class="side__artist">{{ artwork.artist | upper }}:</div>
+      <div class="side__worktitle">{{ artwork.title }}, {{ artwork.year }}</div>
+
+      <div class="side__spec">{{ artwork.medium }}</div>
+      <div class="side__spec">{{ artwork.dimensions_cm }}</div>
+
+      <div class="side__line"></div>
+
+      <div class="btnrow">
+        <a class="btn" href="mailto:info@532gallery.com?subject=Inquiry%20—%20{{ artwork.artist }}%20{{ artwork.title }}">PURCHASE / INQUIRE</a>
+        <div class="pricebox">${{ artwork.price }}</div>
+      </div>
+
+      <div class="smallmuted">Shipping quote on request. Local pickup available.</div>
+    </div>
+  </aside>
+</div>
+
+<div class="section">
+  <div class="sectiongrid">
+    <div class="label">About the artwork:</div>
+    <div class="copy">
+      {% if artwork.blurb %}
+        <p>{{ artwork.blurb }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sectiongrid">
+    <div class="label">About the artist:</div>
+    <div class="copy">
+      {% if artwork.artist_bio and artwork.artist_bio.length %}
+        {% for p in artwork.artist_bio %}
+          {% if p.startsWith("View Full Artist Profile:") %}
+            {% set url = p.replace("View Full Artist Profile:", "").trim() %}
+            <p>
+              <a href="{{ url }}" target="_blank" rel="noopener">
+                View Full Artist Profile
+              </a>
+            </p>
+          {% else %}
+            <p>{{ p }}</p>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{# ----------------------------
+  RECOMMENDED (safe)
+  - Excludes current artwork
+  - Same artist first, then fill
+  - Max 6
+  - Uses EXACT same markup/classes as src/new.njk
+----------------------------- #}
+
+{% set maxRecs = 6 %}
+{% set recommended = [] %}
+
+{# 1) Same artist first #}
+{% for a in artworks %}
+  {% if a.slug != artwork.slug and a.artist == artwork.artist and recommended.length < maxRecs %}
+    {% set _ = recommended.push(a) %}
+  {% endif %}
+{% endfor %}
+
+{# 2) Fill with others #}
+{% for a in artworks %}
+  {% if a.slug != artwork.slug and a.artist != artwork.artist and recommended.length < maxRecs %}
+    {% set _ = recommended.push(a) %}
+  {% endif %}
+{% endfor %}
+
+{% if recommended.length %}
+  <div class="section rec">
+    <h2 class="page__title">RECOMMENDED:</h2>
+    <p class="page__sub">More works you might like.</p>
+
+    <div class="grid">
+      {% for item in recommended %}
+        <article class="card">
+          <a class="card__img" href="/artwork/{{ item.slug }}/" aria-label="{{ item.artist }} — {{ item.title }}">
+            <img class="front" src="/assets/img/{{ item.images.front }}" alt="{{ item.artist }} — {{ item.title }}">
+            {% if item.images.hover %}
+              <img class="hover" src="/assets/img/{{ item.images.hover }}" alt="" aria-hidden="true">
+            {% endif %}
+          </a>
+
+          <div class="meta">
+            <div class="artist">{{ item.artist | upper }}</div>
+            <div class="title">{{ item.title }}, {{ item.year }}</div>
+            <div class="medium">{{ item.medium }}</div>
+            <div class="price">$ {{ item.price }}</div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+
+

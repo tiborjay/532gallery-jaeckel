@@ -1,0 +1,51 @@
+---
+layout: base-v2.njk
+title: New Artworks
+permalink: "/artworks-v2/index.html"
+showSearch: true
+---
+
+<div class="page">
+  <h1 class="page__title">NEW ARTWORKS:</h1>
+  <p class="page__sub">One-of-a-kind artworks and limited edition prints.</p>
+
+  <div class="grid">
+    {% for artwork in artworks_v2 %}
+      <article class="card">
+        <a
+          class="card__img"
+          href="/artwork-v2/{{ artwork.slug }}/"
+          aria-label="{{ artwork.artist }} — {{ artwork.title }}"
+        >
+          <img
+            class="front"
+            src="/assets/img/{{ artwork.images.front }}"
+            alt="{{ artwork.artist }} — {{ artwork.title }}"
+          >
+
+          {% if artwork.images.hover %}
+          <img
+            class="hover"
+            src="/assets/img/{{ artwork.images.hover }}"
+            alt=""
+            aria-hidden="true"
+          >
+          {% endif %}
+        </a>
+
+        <div class="meta">
+          <div class="artist">{{ artwork.artist | upper }}</div>
+          <div class="title">
+            {{ artwork.title }}{% if artwork.year %}, {{ artwork.year }}{% endif %}
+          </div>
+          {% if artwork.medium %}
+          <div class="medium">{{ artwork.medium }}</div>
+          {% endif %}
+          {% if artwork.price %}
+          <div class="price">$ {{ artwork.price | price }}</div>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>

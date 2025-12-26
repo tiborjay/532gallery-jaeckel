@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: Featured Works
+showSearch: false
+permalink: "/featured-lcz/index.html"
+---
+
+<div class="page">
+  <h1 class="page__title">FEATURED WORKS:</h1>
+  <p class="page__sub">Lily Prince • Christine Nguyen • Zayasaikhan Sambuu</p>
+
+  <div class="grid">
+    {% for artwork in featured_lcz %}
+      <article class="card">
+        <a class="card__img" href="/artwork/{{ artwork.slug }}/" aria-label="{{ artwork.artist }} — {{ artwork.title }}">
+          <img class="front" src="/assets/img/{{ artwork.images.front }}" alt="{{ artwork.artist }} — {{ artwork.title }}">
+          {% if artwork.images.hover %}
+            <img class="hover" src="/assets/img/{{ artwork.images.hover }}" alt="" aria-hidden="true">
+          {% endif %}
+        </a>
+
+        <div class="meta">
+          <div class="artist">{{ artwork.artist | upper }}</div>
+          <div class="title">{{ artwork.title }}, {{ artwork.year }}</div>
+          <div class="medium">{{ artwork.medium }}</div>
+          <div class="price">$ {{ artwork.price }}</div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>
+
