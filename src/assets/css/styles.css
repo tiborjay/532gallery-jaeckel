@@ -22,11 +22,23 @@ main{padding:64px 0}
   border-bottom:1px solid var(--line);
 }
 .topbar__inner{
-  max-width:1200px;margin:0 auto;
-  display:flex;align-items:center;gap:22px;
-  padding:14px 20px;
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:22px;
+  padding:10px 20px;   /* was 14px 20px */
 }
-.brand{font-weight:600;letter-spacing:.02em;}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.brand__logo{
+  height:44px;   /* try 44; if still small, use 52 */
+  width:auto;
+  display:block;
+}
 .nav{display:flex;gap:18px;font-size:14px;color:var(--ink)}
 .nav a{opacity:.85}
 .nav a:hover{opacity:1}
