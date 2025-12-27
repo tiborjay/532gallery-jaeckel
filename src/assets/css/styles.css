@@ -136,35 +136,35 @@ main{padding:64px 0}
   .card__img img.hover{display:none !important}
 }
 
+/* Grid captions — same size + gray */
 .meta{
   text-align:center;
   font-size:12px;
-  line-height:1.15;
+  line-height:1.2;
   margin-bottom:14px;
+  color:#8a8a8a;
 }
+
 .meta .artist,
 .meta .title,
 .meta .medium,
 .meta .price{
   font-weight:400;
   font-style:normal;
+  font-size:12px;   /* force same size */
+  color:inherit;    /* all gray */
+  margin-top:2px;
 }
+
 .meta .artist{
-  letter-spacing:.06em;
   text-transform:uppercase;
-  margin-bottom:1px;
+  letter-spacing:.08em;
+  margin-top:0;
 }
-.meta .title{
-  margin-top:1px;
-  font-size:13px;
-}
-.meta .medium{
-  margin-top:1px;
-  color:#8a8a8a;
-  opacity:1;
-}
-.meta .price{margin-top:5px}
-.meta .avail{margin-top:4px;color:#9a9a9a;}
+
+.meta .price{margin-top:4px}
+.meta .avail{margin-top:4px;color:inherit;}
+
 
 /* =========================
    DETAIL PAGE (DESKTOP / BASE)
@@ -265,9 +265,9 @@ main{padding:64px 0}
   position:relative;
   width:min(980px, 100%);
   overflow:hidden;
-  background:#fff;
-  border-radius:2px;
-  padding:10px;
+  background:transparent;
+  border-radius:0;
+  padding:0;
 }
 .mcar__track{
   display:flex;
@@ -289,7 +289,7 @@ main{padding:64px 0}
   max-height:70vh;
   object-fit:contain;
   border-radius:2px;
-  box-shadow:0 12px 28px rgba(0,0,0,.18);
+  box-shadow:none;
 }
 .mcar__nav{
   position:absolute;
@@ -462,11 +462,13 @@ body.lb-open { overflow: hidden; }
     margin-bottom:12px;
     line-height:1.15;
   }
-  .meta .artist{font-size:12px;letter-spacing:.08em;}
-  .meta .title{font-size:13px;margin-top:1px;}
-  .meta .medium{font-size:12px;margin-top:1px;}
-  .meta .price{font-size:13px;margin-top:4px;}
-
+/* mobile captions — same size + gray */
+.meta{
+  color:#8a8a8a;
+}
+.meta .artist{
+  letter-spacing:.08em;
+}
   /* detail */
   .detail{display:block;padding:18px 0 0}
   .detail__media{padding:0 14px}
