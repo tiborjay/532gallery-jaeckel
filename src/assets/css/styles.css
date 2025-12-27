@@ -144,12 +144,12 @@ main{padding:64px 0}
   .card__img img.hover{display:none !important}
 }
 
-/* Meta text — consistent, no bold/italics */
+/* Meta text — tightened, detail-page style */
 .meta{
   text-align:center;
   font-size:12px;
-  line-height:1.25;
-  margin-bottom:10px;
+  line-height:1.15;
+  margin-bottom:14px;
 }
 
 .meta .artist,
@@ -161,25 +161,60 @@ main{padding:64px 0}
 }
 
 .meta .artist{
-  letter-spacing:.08em;
+  letter-spacing:.06em;
   text-transform:uppercase;
+  margin-bottom:1px;
 }
-.meta .title{ margin-top:2px; }
-.meta .medium{ margin-top:1px; opacity:.8; }
-.meta .price{ margin-top:2px; }
-.meta .avail{ margin-top:2px; color:#9a9a9a; }
-/* Mobile meta — same rules, just sizing */
+
+.meta .title{
+  margin-top:1px;
+  font-size:13px;
+}
+
+.meta .medium{
+  margin-top:1px;
+  color:#8a8a8a;   /* gray like detail page */
+  opacity:1;
+}
+
+.meta .price{
+  margin-top:5px;
+}
+
+.meta .avail{
+  margin-top:4px;
+  color:#9a9a9a;
+}
+
+/* Mobile meta */
 @media (max-width: 760px){
-  .card{gap:10px}
-.meta{
-  padding-top:8px;
-  margin-bottom:8px;
-}
-.meta .artist{font-size:12px;letter-spacing:.10em}
-.meta .title{font-size:13px;line-height:1.2;margin-top:2px}
-.meta .medium{font-size:12px;opacity:.75;margin-top:1px}
-.meta .price{font-size:13px;margin-top:2px}
-}
+  .card{ gap:10px; }
+
+  .meta{
+    padding-top:6px;
+    margin-bottom:12px;
+    line-height:1.15;
+  }
+
+  .meta .artist{
+    font-size:12px;
+    letter-spacing:.08em;
+  }
+
+  .meta .title{
+    font-size:13px;
+    margin-top:1px;
+  }
+
+  .meta .medium{
+    font-size:12px;
+    margin-top:1px;
+  }
+
+  .meta .price{
+    font-size:13px;
+    margin-top:4px;
+  }
 
 /* =========================
    DETAIL PAGE (DESKTOP)
