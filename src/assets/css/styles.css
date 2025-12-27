@@ -160,20 +160,18 @@ main{padding:64px 0}
   letter-spacing:.08em;
   text-transform:uppercase;
 }
-
-.meta .title{ margin-top:4px; }
-.meta .medium{ margin-top:2px; opacity:.85; }
-.meta .price{ margin-top:6px; }
-.meta .avail{ margin-top:6px; color:#9a9a9a; }
-
+.meta .title{ margin-top:2px; }
+.meta .medium{ margin-top:1px; opacity:.8; }
+.meta .price{ margin-top:2px; }
+.meta .avail{ margin-top:2px; color:#9a9a9a; }
 /* Mobile meta — same rules, just sizing */
 @media (max-width: 760px){
   .card{gap:10px}
   .meta{padding-top:8px}
   .meta .artist{font-size:12px;letter-spacing:.10em}
-.meta .title{font-size:13px;line-height:1.18;margin-top:3px}
-.meta .medium{font-size:12px;opacity:.75;margin-top:2px}
-.meta .price{font-size:13px;margin-top:4px}
+.meta .title{font-size:13px;line-height:1.2;margin-top:2px}
+.meta .medium{font-size:12px;opacity:.75;margin-top:1px}
+.meta .price{font-size:13px;margin-top:2px}
 }
 
 /* =========================
