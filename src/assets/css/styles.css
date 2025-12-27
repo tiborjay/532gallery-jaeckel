@@ -125,23 +125,41 @@ main{padding:64px 0}
   .card__img img.hover{display:none !important}
 }
 
-/* Meta text */
-.meta{text-align:center;font-size:12px;line-height:1.35;}
-.meta .artist{font-weight:600;letter-spacing:.02em}
-.meta .title{font-style:italic}
-.meta .medium{color:var(--ink);opacity:.85}
-.meta .price{margin-top:2px;font-weight:500}
-.meta .avail{margin-top:4px;color:#9a9a9a}
+/* Meta text — consistent, no bold/italics */
+.meta{
+  text-align:center;
+  font-size:12px;
+  line-height:1.35;
+}
 
-/* Mobile meta */
+.meta .artist,
+.meta .title,
+.meta .medium,
+.meta .price{
+  font-weight:400;
+  font-style:normal;
+}
+
+.meta .artist{
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.meta .title{ margin-top:6px; }
+.meta .medium{ margin-top:4px; opacity:.85; }
+.meta .price{ margin-top:8px; }
+.meta .avail{ margin-top:6px; color:#9a9a9a; }
+
+/* Mobile meta — same rules, just sizing */
 @media (max-width: 760px){
   .card{gap:10px}
   .meta{padding-top:8px}
-  .meta .artist{font-size:12px;letter-spacing:.10em;font-weight:700}
-  .meta .title{font-size:13px;line-height:1.25;margin-top:3px}
+  .meta .artist{font-size:12px;letter-spacing:.10em}
+  .meta .title{font-size:13px;line-height:1.25;margin-top:4px}
   .meta .medium{font-size:12px;opacity:.75;margin-top:3px}
-  .meta .price{font-size:13px;margin-top:6px;font-weight:700}
+  .meta .price{font-size:13px;margin-top:6px}
 }
+
 /* =========================
    DETAIL PAGE (DESKTOP)
    ========================= */
@@ -183,8 +201,17 @@ main{padding:64px 0}
   padding-left:10px;
 }
 .side__top{font-size:13px;line-height:1.4;}
-.side__artist{font-weight:600;letter-spacing:.02em;text-transform:uppercase}
-.side__worktitle{font-style:italic}
+
+/* UPDATED: match label style (no bold) */
+.side__artist{
+  font-weight:400;
+  letter-spacing:.08em;
+  text-transform:uppercase
+}
+
+/* UPDATED: no italics */
+.side__worktitle{font-style:normal}
+
 .side__spec{color:var(--muted);margin-top:10px}
 .side__line{height:1px;background:var(--line);margin:14px 0}
 
@@ -199,7 +226,15 @@ main{padding:64px 0}
   border-radius:2px;
 }
 .btn:hover{background:#fafafa}
-.price{font-size:13px;font-weight:600;margin-left:auto;white-space:nowrap}
+
+/* UPDATED: price no longer bold */
+.price{
+  font-size:13px;
+  font-weight:400;
+  margin-left:auto;
+  white-space:nowrap
+}
+
 .smallmuted{color:var(--muted);font-size:12px}
 
 /* Sections */
@@ -229,7 +264,7 @@ main{padding:64px 0}
 .mcar{
   position:relative;
   width:min(980px, 100%);
-  overflow:hidden;              /* THIS is what stops 2 slides showing side-by-side */
+  overflow:hidden;
   background:#fff;
   border-radius:2px;
   padding:10px;
@@ -342,7 +377,10 @@ main{padding:64px 0}
     padding:0 14px;
     margin-top:8px;
   }
-  .side__artist{font-size:14px;letter-spacing:.10em;font-weight:800}
+
+  /* UPDATED: no heavy bold on mobile detail artist */
+  .side__artist{font-size:14px;letter-spacing:.10em;font-weight:400}
+
   .side__worktitle{font-size:18px;line-height:1.2;margin-top:6px}
   .side__spec{font-size:13px;opacity:.8;margin-top:6px}
 
@@ -362,17 +400,24 @@ main{padding:64px 0}
   .buybar__meta{
     margin-bottom:10px;
   }
+
+  /* UPDATED: match label style */
   .buybar__artist{
     font-size:12px;
     letter-spacing:.10em;
-    font-weight:900;
+    font-weight:400;
+    text-transform:uppercase;
   }
+
   .buybar__title{
     margin-top:4px;
     font-size:16px;
     line-height:1.15;
   }
-  .buybar__work{font-style:italic;}
+
+  /* UPDATED: no italics */
+  .buybar__work{font-style:normal;}
+
   .buybar__spec{
     margin-top:6px;
     font-size:13px;
@@ -391,8 +436,10 @@ main{padding:64px 0}
     font-weight:900;
     letter-spacing:.08em;
   }
+
+  /* UPDATED: price no longer bold */
   .buybar__price{
-    font-weight:900;
+    font-weight:400;
     font-size:14px;
     white-space:nowrap;
   }
