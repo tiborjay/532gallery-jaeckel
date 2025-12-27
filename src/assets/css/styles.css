@@ -49,14 +49,18 @@ main{padding:64px 0}
 .page__title{
   text-align:center;
   margin:0 0 6px 0;
-  font-weight:600;
-  letter-spacing:.02em;
+  font-weight:400;          /* not bold */
+  letter-spacing:.08em;     /* Platform-ish tracking */
+  font-size:14px;           /* smaller */
+  text-transform:uppercase;
 }
+
 .page__sub{
   text-align:center;
   margin:0 0 34px 0;
   color:var(--muted);
   font-size:14px;
+  line-height:1.2;
 }
 
 /* Base grid */
@@ -129,7 +133,7 @@ main{padding:64px 0}
 .meta{
   text-align:center;
   font-size:12px;
-  line-height:1.35;
+  line-height:1.22;
 }
 
 .meta .artist,
@@ -145,9 +149,9 @@ main{padding:64px 0}
   text-transform:uppercase;
 }
 
-.meta .title{ margin-top:6px; }
-.meta .medium{ margin-top:4px; opacity:.85; }
-.meta .price{ margin-top:8px; }
+.meta .title{ margin-top:4px; }
+.meta .medium{ margin-top:2px; opacity:.85; }
+.meta .price{ margin-top:6px; }
 .meta .avail{ margin-top:6px; color:#9a9a9a; }
 
 /* Mobile meta — same rules, just sizing */
@@ -155,9 +159,9 @@ main{padding:64px 0}
   .card{gap:10px}
   .meta{padding-top:8px}
   .meta .artist{font-size:12px;letter-spacing:.10em}
-  .meta .title{font-size:13px;line-height:1.25;margin-top:4px}
-  .meta .medium{font-size:12px;opacity:.75;margin-top:3px}
-  .meta .price{font-size:13px;margin-top:6px}
+.meta .title{font-size:13px;line-height:1.18;margin-top:3px}
+.meta .medium{font-size:12px;opacity:.75;margin-top:2px}
+.meta .price{font-size:13px;margin-top:4px}
 }
 
 /* =========================
