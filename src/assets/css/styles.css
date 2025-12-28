@@ -69,7 +69,7 @@ main{padding:64px 0}
 .page{max-width:1200px;margin:0 auto;padding:0 20px;}
 .page__title{
   text-align:center;
-  margin:0 0 6px 0;
+  margin:0 0 22px 0; /* was 6px */
   font-weight:400;
   letter-spacing:.08em;
   font-size:14px;
