@@ -1,35 +1,44 @@
+
 [
   {
-    "slug": "sambuu-sweet-on-you",
+     "slug": "sambuu-sweet-on-you",
     "artist": "Zayasaikhan Sambuu",
     "title": "Sweet on You",
     "year": "2022",
     "medium": "Acrylic on canvas",
     "dimensions_cm": "80 × 67 cm",
+    "dimensions_in": "",
     "price": "8000",
+    "available_until": "",
     "blurb": "Sugary tones and affectionate motifs entwine, inviting reflection on modern sweetness amid global influences, in Sambuu’s energetic style.",
+    "flags": [],
+    "artist_bio": [
+      "Zayasaikhan Sambuu’s vibrant paintings fuse pop culture with Mongolian traditions, using candy-like colors and playful motifs to explore themes of consumerism, identity, and modern life. His works balance bold graphic elements with subtle cultural commentary, creating energetic compositions that invite viewers to reflect on global influences through a whimsical lens. Zayasaikhan Sambuu was born in 1975 in Ulaanbaatar, Mongolia, and lives and works there. He received his education at the Mongolian University of Arts and Culture."
+    ],
     "images": {
       "front": "sambuu-sweet-on-you-front.jpg",
       "hover": "sambuu-sweet-on-you-hover.jpg"
-    },
-    "artist_bio": [
-      "Zayasaikhan Sambuu’s vibrant paintings fuse pop culture with Mongolian traditions, using candy-like colors and playful motifs to explore themes of consumerism, identity, and modern life.",
-      "Zayasaikhan Sambuu was born in 1975 in Ulaanbaatar, Mongolia, and lives and works there."
-    ]
+    }
   },
   {
-    "slug": "sambuu-candy-girl-1",
+   "slug": "sambuu-candy-girl-1",
     "artist": "Zayasaikhan Sambuu",
     "title": "Candy Girl",
     "year": "2022",
     "medium": "Acrylic on canvas",
     "dimensions_cm": "80 × 67 cm",
+    "dimensions_in": "",
     "price": "8000",
+    "available_until": "",
     "blurb": "A candy-hued figure pops with playful energy, fusing Mongolian motifs with consumerist whimsy to explore identity in a vibrant, graphic narrative.",
+    "flags": [],
+    "artist_bio": [
+      "Zayasaikhan Sambuu’s vibrant paintings fuse pop culture with Mongolian traditions, using candy-like colors and playful motifs to explore themes of consumerism, identity, and modern life. His works balance bold graphic elements with subtle cultural commentary, creating energetic compositions that invite viewers to reflect on global influences through a whimsical lens. Zayasaikhan Sambuu was born in 1975 in Ulaanbaatar, Mongolia, and lives and works there. He received his education at the Mongolian University of Arts and Culture."
+    ],
     "images": {
       "front": "sambuu-candy-girl-1-front.jpg",
-      "hover": "sambuu-candy-girl-1-hover.jpg"
-    }
+      "hover": "sambuu-candy-girl-1-hover.jpg" 
+   }
   },
   {
     "slug": "sambuu-candy-girl-2",
@@ -38,8 +47,14 @@
     "year": "2022",
     "medium": "Acrylic on canvas",
     "dimensions_cm": "80 × 67 cm",
+    "dimensions_in": "",
     "price": "8000",
-    "blurb": "Sequel to the series, layering sweet colors and bold forms through Sambuu’s signature pop-traditional blend.",
+    "available_until": "",
+    "blurb": "Sequel to the series, this piece layers sweet colors and bold forms, commenting on cultural contrasts through Sambuu’s signature pop-traditional blend.",
+    "flags": [],
+    "artist_bio": [
+      "Zayasaikhan Sambuu’s vibrant paintings fuse pop culture with Mongolian traditions, using candy-like colors and playful motifs to explore themes of consumerism, identity, and modern life. His works balance bold graphic elements with subtle cultural commentary, creating energetic compositions that invite viewers to reflect on global influences through a whimsical lens. Zayasaikhan Sambuu was born in 1975 in Ulaanbaatar, Mongolia, and lives and works there. He received his education at the Mongolian University of Arts and Culture."
+    ],
     "images": {
       "front": "sambuu-candy-girl-2-front.jpg",
       "hover": "sambuu-candy-girl-2-hover.jpg"
@@ -52,22 +67,36 @@
     "year": "2025",
     "medium": "Archival pigment inks on cotton rag paper with salt crystals, gold leaf, and color pencil",
     "dimensions_cm": "60.64 × 50.48 cm",
+    "dimensions_in": "",
     "price": "7000",
-    "blurb": "Blending lotus blooms with moth forms in a starry cosmos, imagining fluid connections between earthly flora and celestial realms.",
+    "available_until": "",
+    "blurb": "Blending lotus blooms with moth forms in a starry cosmos, this work imagines fluid connections between earthly flora and celestial realms, inspired by 19th-century naturalists to fluctuate between microcosmic details and macroscopic wonders. Framed dimensions: 63.5 × 53.5 × 3.1 cm.",
+    "flags": [],
+    "artist_bio": [
+      "Christine Nguyen’s work draws on nature, science, and the cosmos, imagining fluid connections between ocean depths and outer space through an organic prism. Her practice, inspired by 19th-century naturalists like Ernst Haeckel and Anna Atkins, extracts curiosities from the natural world to create meditative, micro-macroscopic visions blending biology, philosophy, and mystery. Nguyen was born in 1977 in Mountain View, California, and resides in Aurora, Colorado, and Long Beach, California. She received her BFA from California State University, Long Beach, and her MFA from the University of California, Irvine. Nguyen has had solo exhibitions tied to residencies at Montello Foundation, NV, and Pacific Bonsai Museum, WA. She has participated in recent group exhibitions at the J. Paul Getty Museum and Armand Hammer Museum, with works in collections including the Getty Research Institute and Long Beach Museum of Art.",
+      "View Full Artist Profile: https://www.532gallery.com/artists/76-christine-nguyen/"
+    ],
     "images": {
       "front": "nguyen-cosmic-lotus-moth-front.jpg",
       "hover": "nguyen-cosmic-lotus-moth-hover.jpg"
     }
   },
   {
-    "slug": "nguyen-cosmic-rabbit-light",
+   "slug": "nguyen-cosmic-rabbit-light",
     "artist": "Christine Nguyen",
     "title": "Cosmic Rabbit Light",
     "year": "2023",
     "medium": "Mixed media on Mylar",
     "dimensions_cm": "61 × 50.8 cm",
+    "dimensions_in": "",
     "price": "3000",
-    "blurb": "A quiet rabbit floats in luminous cosmic fields, symbolizing vulnerability, intuition, and renewal.",
+    "available_until": "",
+    "blurb": "A quiet rabbit floats in luminous cosmic fields, symbolizing vulnerability, intuition, and renewal. Translucent arcs and botanical fragments suggest gentle motion, bridging intimate and infinite spaces.",
+    "flags": [],
+    "artist_bio": [
+      "Christine Nguyen’s work draws on nature, science, and the cosmos, imagining fluid connections between ocean depths and outer space through an organic prism. Her practice, inspired by 19th-century naturalists like Ernst Haeckel and Anna Atkins, extracts curiosities from the natural world to create meditative, micro-macroscopic visions blending biology, philosophy, and mystery. Nguyen was born in 1977 in Mountain View, California, and resides in Aurora, Colorado, and Long Beach, California. She received her BFA from California State University, Long Beach, and her MFA from the University of California, Irvine. Nguyen has had solo exhibitions tied to residencies at Montello Foundation, NV, and Pacific Bonsai Museum, WA. She has participated in recent group exhibitions at the J. Paul Getty Museum and Armand Hammer Museum, with works in collections including the Getty Research Institute and Long Beach Museum of Art.",
+      "View Full Artist Profile: https://www.532gallery.com/artists/76-christine-nguyen/"
+    ],
     "images": {
       "front": "nguyen-cosmic-rabbit-light-front.jpg",
       "hover": "nguyen-cosmic-rabbit-light-hover.jpg"
@@ -80,69 +109,103 @@
     "year": "2023",
     "medium": "Mixed media on Mylar",
     "dimensions_cm": "61 × 50.8 cm",
+    "dimensions_in": "",
     "price": "3000",
-    "blurb": "A contemplative owl guards a radiant atmosphere, merging wisdom with serenity.",
+    "available_until": "",
+    "blurb": "A contemplative owl guards a radiant atmosphere, embodying perception and knowledge. Layered marks and refracting light create depth like a breathing constellation, merging wisdom with serenity.",
+    "flags": [],
+    "artist_bio": [
+      "Christine Nguyen’s work draws on nature, science, and the cosmos, imagining fluid connections between ocean depths and outer space through an organic prism. Her practice, inspired by 19th-century naturalists like Ernst Haeckel and Anna Atkins, extracts curiosities from the natural world to create meditative, micro-macroscopic visions blending biology, philosophy, and mystery. Nguyen was born in 1977 in Mountain View, California, and resides in Aurora, Colorado, and Long Beach, California. She received her BFA from California State University, Long Beach, and her MFA from the University of California, Irvine. Nguyen has had solo exhibitions tied to residencies at Montello Foundation, NV, and Pacific Bonsai Museum, WA. She has participated in recent group exhibitions at the J. Paul Getty Museum and Armand Hammer Museum, with works in collections including the Getty Research Institute and Long Beach Museum of Art.",
+      "View Full Artist Profile: https://www.532gallery.com/artists/76-christine-nguyen/"
+    ],
     "images": {
       "front": "nguyen-cosmic-owl-light-front.jpg",
       "hover": "nguyen-cosmic-owl-light-hover.jpg"
     }
   },
   {
-    "slug": "nguyen-cosmic-blue-flower-light",
+   "slug": "nguyen-cosmic-blue-flower-light",
     "artist": "Christine Nguyen",
     "title": "Cosmic Blue Flower Light",
     "year": "2023",
     "medium": "Mixed media on Mylar",
     "dimensions_cm": "61 × 50.8 cm",
+    "dimensions_in": "",
     "price": "3000",
-    "blurb": "A radiant bloom suspended between emergence and dissolution, channeling light and growth.",
+    "available_until": "",
+    "blurb": "A radiant bloom suspends between emergence and dissolution, channeling light and growth. Arcs and floating points form a dynamic system, turning the flower into a cosmic-natural portal.",
+    "flags": [],
+    "artist_bio": [
+      "Christine Nguyen’s work draws on nature, science, and the cosmos, imagining fluid connections between ocean depths and outer space through an organic prism. Her practice, inspired by 19th-century naturalists like Ernst Haeckel and Anna Atkins, extracts curiosities from the natural world to create meditative, micro-macroscopic visions blending biology, philosophy, and mystery. Nguyen was born in 1977 in Mountain View, California, and resides in Aurora, Colorado, and Long Beach, California. She received her BFA from California State University, Long Beach, and her MFA from the University of California, Irvine. Nguyen has had solo exhibitions tied to residencies at Montello Foundation, NV, and Pacific Bonsai Museum, WA. She has participated in recent group exhibitions at the J. Paul Getty Museum and Armand Hammer Museum, with works in collections including the Getty Research Institute and Long Beach Museum of Art.",
+      "View Full Artist Profile: https://www.532gallery.com/artists/76-christine-nguyen/"
+    ],
     "images": {
       "front": "nguyen-cosmic-blue-flower-light-front.jpg",
       "hover": "nguyen-cosmic-blue-flower-light-hover.jpg"
     }
   },
   {
-    "slug": "prince-cloud-euphoria",
+     "slug": "prince-cloud-euphoria",
     "artist": "Lily Prince",
     "title": "Cloud Euphoria",
     "year": "2024",
     "medium": "Acrylic on canvas",
     "dimensions_cm": "152.4 × 152.4 cm",
+    "dimensions_in": "",
     "price": "9500",
-    "blurb": "Billowing clouds swirl in euphoric abstraction, capturing fleeting atmospheric joy.",
+    "available_until": "",
+    "blurb": "Billowing clouds swirl in euphoric abstraction, inspired by en plein air sessions to capture fleeting atmospheric joy, blending perception with emotional universality for an immersive skyward gaze.",
+    "flags": [],
+    "artist_bio": [
+      "Lily Prince’s plein air-inspired works translate observational landscapes into personal expressions of universal significance, viewing beauty as a form of protest amid environmental and societal challenges. Combining direct perception, memory, and aspiration, her watercolor, gouache, and oil pastel pieces create fresh vistas that feel familiar yet surprising, drawing from terrains like the American West, Italy, and New York’s Hudson Valley. Prince was born in 1962 and is based in New York and the Hudson Valley. She received her BFA from Rhode Island School of Design and her MFA from Bard College, with a residency at Skowhegan. Prince has had solo exhibitions linked to residencies at Olana and BAU Institute, Italy. She has participated in recent group exhibitions at the New Museum, NY; Galerie Huit, Arles, France; and Draftsmen’s Congress at The New Museum.",
+      "View Full Artist Profile: https://www.532gallery.com/artists/75-lily-prince/"
+    ],
     "images": {
       "front": "prince-cloud-euphoria-front.jpg",
       "hover": "prince-cloud-euphoria-hover.jpg"
     }
   },
   {
-    "slug": "prince-morning",
+   "slug": "prince-morning",
     "artist": "Lily Prince",
     "title": "Morning",
     "year": "2025",
     "medium": "Acrylic on 300 lb. paper",
     "dimensions_cm": "55.88 × 60.96 cm",
+    "dimensions_in": "",
     "price": "4000",
-    "blurb": "The fresh glow of dawn translated into an aspirational landscape of renewal.",
+    "available_until": "",
+    "blurb": "Depicting the fresh glow of dawn’s light on terrain, this piece translates direct perception into aspirational space, merging Italian, Irish, and American West influences for an uplifting narrative of renewal.",
+    "flags": [],
+    "artist_bio": [
+      "Lily Prince’s plein air-inspired works translate observational landscapes into personal expressions of universal significance, viewing beauty as a form of protest amid environmental and societal challenges. Combining direct perception, memory, and aspiration, her watercolor, gouache, and oil pastel pieces create fresh vistas that feel familiar yet surprising, drawing from terrains like the American West, Italy, and New York’s Hudson Valley. Prince was born in 1962 and is based in New York and the Hudson Valley. She received her BFA from Rhode Island School of Design and her MFA from Bard College, with a residency at Skowhegan. Prince has had solo exhibitions linked to residencies at Olana and BAU Institute, Italy. She has participated in recent group exhibitions at the New Museum, NY; Galerie Huit, Arles, France; and Draftsmen’s Congress at The New Museum.",
+      "View Full Artist Profile: https://www.532gallery.com/artists/75-lily-prince/"
+    ],
     "images": {
       "front": "prince-morning-front.jpg",
       "hover": "prince-morning-hover.jpg"
     }
   },
   {
-    "slug": "prince-evening",
+      "slug": "prince-evening",
     "artist": "Lily Prince",
     "title": "Evening",
     "year": "2025",
     "medium": "Acrylic on 300 lb. paper, white frame",
     "dimensions_cm": "55.88 × 60.96 cm",
+    "dimensions_in": "",
     "price": "5000",
-    "blurb": "Softening dusk hues blend observation and memory into a peaceful transition.",
+    "available_until": "",
+    "blurb": "This watercolor captures the softening hues of dusk in a landscape vista, blending plein air observation with memory to evoke a sense of peaceful transition, positioning beauty as a subtle protest against environmental flux. Framed dimensions: 63 × 68 × 3 cm.",
+    "flags": [],
+    "artist_bio": [
+      "Lily Prince’s plein air-inspired works translate observational landscapes into personal expressions of universal significance, viewing beauty as a form of protest amid environmental and societal challenges. Combining direct perception, memory, and aspiration, her watercolor, gouache, and oil pastel pieces create fresh vistas that feel familiar yet surprising, drawing from terrains like the American West, Italy, and New York’s Hudson Valley. Prince was born in 1962 and is based in New York and the Hudson Valley. She received her BFA from Rhode Island School of Design and her MFA from Bard College, with a residency at Skowhegan. Prince has had solo exhibitions linked to residencies at Olana and BAU Institute, Italy. She has participated in recent group exhibitions at the New Museum, NY; Galerie Huit, Arles, France; and Draftsmen’s Congress at The New Museum.",
+      "View Full Artist Profile: https://www.532gallery.com/artists/75-lily-prince/"
+    ],
     "images": {
       "front": "prince-evening-front.jpg",
       "hover": "prince-evening-hover.jpg"
     }
   }
 ]
-
 
